@@ -43,8 +43,8 @@ end
 
 ################################################## OTHER FUNCTIONS #####################################################
 
-register_component!(T::Type) = register_component!(WORLD, T)
-create_entity!(d::Tuple; parent=-1) = create_entity!(WORLD, d; parent=-1)
-remove_entity!(entity::Entity) = remove_entity!(WORLD, entity)
-attach_component!(entity::Entity, data) = attach_component!(WORLD, entity, data)
-detach_component!(e::Entity, T) = detach_component!(WORLD, e, T)
+ReactiveECS.register_component!(T::Type) = register_component!(WORLD, T)
+ReactiveECS.create_entity!(d::Tuple; parent=-1) = create_entity!(WORLD, d; parent=-1)
+ReactiveECS.remove_entity!(entity::Entity) = remove_entity!(WORLD, entity)
+ReactiveECS.attach_component!(entity::Entity, data) = attach_component!(WORLD, entity, data)
+ReactiveECS.detach_component!(e::Entity, T) = detach_component!(WORLD, e, T)
